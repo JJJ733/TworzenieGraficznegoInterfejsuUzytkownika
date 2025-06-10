@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- App name -->
+    <string name="app_name">My First Android App</string>
+
+    <!-- MainActivity -->
+    <string name="first_name">First Name</string>
+    <string name="last_name">Last Name</string>
+    <string name="grades_hint">Number of grades (5–15)</string>
+    <string name="grades_button">Submit</string>
+
+    <!-- Validation errors -->
+    <string name="error_first_name">First name cannot be empty</string>
+    <string name="error_last_name">Last name cannot be empty</string>
+    <string name="error_number_format">Enter a valid number</string>
+    <string name="error_grades_range">Number of grades must be between 5 and 15</string>
+
+    <!-- GradesActivity -->
+    <string name="grades">Grades</string>
+    <string name="calculate_average">Calculate Average</string>
+
+    <!-- Post-average buttons -->
+    <string name="super_button">Great!</string>
+    <string name="fail_button">Try Again</string>
+
+    <!-- Toast messages after average -->
+    <string name="pass_msg">Congratulations! You passed!</string>
+    <string name="fail_msg">Submitting request for conditional pass</string>
+
+    <!-- Row placeholder -->
+    <string name="subject_placeholder">Subject</string>
+    <string name="error_incomplete_grades">You must choose all the options!</string>
+
+    <!-- Subjects list -->
+    <string-array name="subject_names">
+        <item>Mathematics</item>
+        <item>Physics</item>
+        <item>Chemistry</item>
+        <item>Biology</item>
+        <item>History</item>
+        <item>Geography</item>
+        <item>English</item>
+        <item>Computer Science</item>
+        <item>Philosophy</item>
+        <item>Art</item>
+        <item>Music</item>
+        <item>Physical Education</item>
+        <item>French</item>
+        <item>German</item>
+        <item>Technology</item>
+    </string-array>
+
+</resources>

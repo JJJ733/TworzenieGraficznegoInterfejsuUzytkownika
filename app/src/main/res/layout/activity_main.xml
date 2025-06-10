@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mainLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:padding="16dp">
+
+    <!-- Toolbar -->
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/topAppBar"
+        android:layout_width="0dp"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/colorPrimary"
+        app:title="Student info"
+        app:titleTextColor="@android:color/white"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- First name -->
+    <TextView
+        android:id="@+id/labelFirstName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/first_name"
+        android:textSize="16sp"
+        android:gravity="center_vertical"
+        app:layout_constraintTop_toBottomOf="@id/topAppBar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/editTextFirstName"
+        app:layout_constraintWidth_percent="0.3"
+        android:layout_marginTop="16dp" />
+
+    <EditText
+        android:id="@+id/editTextFirstName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="@string/first_name"
+        android:inputType="textPersonName"
+        app:layout_constraintTop_toTopOf="@id/labelFirstName"
+        app:layout_constraintBottom_toBottomOf="@id/labelFirstName"
+        app:layout_constraintStart_toEndOf="@id/labelFirstName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintWidth_percent="0.6" />
+
+    <!-- Last name -->
+    <TextView
+        android:id="@+id/labelLastName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/last_name"
+        android:textSize="16sp"
+        android:gravity="center_vertical"
+        app:layout_constraintTop_toBottomOf="@id/editTextFirstName"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/editTextLastName"
+        app:layout_constraintWidth_percent="0.3"
+        android:layout_marginTop="12dp" />
+
+    <EditText
+        android:id="@+id/editTextLastName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="@string/last_name"
+        android:inputType="textPersonName"
+        app:layout_constraintTop_toTopOf="@id/labelLastName"
+        app:layout_constraintBottom_toBottomOf="@id/labelLastName"
+        app:layout_constraintStart_toEndOf="@id/labelLastName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintWidth_percent="0.6" />
+
+    <!-- Grades -->
+    <TextView
+        android:id="@+id/labelGrades"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/grades"
+        android:textSize="16sp"
+        android:gravity="center_vertical"
+        app:layout_constraintTop_toBottomOf="@id/editTextLastName"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/editTextGradesCount"
+        app:layout_constraintWidth_percent="0.3"
+        android:layout_marginTop="12dp" />
+
+    <EditText
+        android:id="@+id/editTextGradesCount"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="@string/grades_hint"
+        android:inputType="number"
+        app:layout_constraintTop_toTopOf="@id/labelGrades"
+        app:layout_constraintBottom_toBottomOf="@id/labelGrades"
+        app:layout_constraintStart_toEndOf="@id/labelGrades"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintWidth_percent="0.6" />
+
+    <!-- Submit button -->
+    <Button
+        android:id="@+id/buttonSubmit"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/grades_button"
+        android:visibility="gone"
+        app:layout_constraintTop_toBottomOf="@id/editTextGradesCount"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="20dp" />
+
+    <!-- Average text -->
+    <TextView
+        android:id="@+id/averageTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Average:"
+        android:textSize="18sp"
+        android:visibility="gone"
+        app:layout_constraintTop_toBottomOf="@id/buttonSubmit"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="16dp" />
+
+    <!-- Result button -->
+    <Button
+        android:id="@+id/resultButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/super_button"
+        android:visibility="gone"
+        app:layout_constraintTop_toBottomOf="@id/averageTextView"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="8dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
